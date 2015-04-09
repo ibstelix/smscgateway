@@ -23,7 +23,7 @@
 	<!-- M3UAManagement is managing the m3ua side commands -->
 	<!-- ==================================================================== -->
 	<!-- -->
-	<bean name="Mtp3UserPart" class="org.mobicents.protocols.ss7.m3ua.impl.M3UAManagement">
+	<bean name="Mtp3UserPart" class="org.mobicents.protocols.ss7.m3ua.impl.M3UAManagementImpl">
 		<constructor>
 			<parameter>Mtp3UserPart</parameter>
 		</constructor>
@@ -95,6 +95,7 @@
 	<!-- ==================================================================== -->
 	<bean name="TcapStack" class="org.mobicents.protocols.ss7.tcap.TCAPStackImpl">
 		<constructor>
+			<parameter>defaultTcapName</parameter>
 			<parameter>
 				<inject bean="SccpStack" property="sccpProvider" />
 			</parameter>
@@ -110,6 +111,7 @@
 	<!-- ==================================================================== -->
 	<bean name="MapStack" class="org.mobicents.protocols.ss7.map.MAPStackImpl">
 		<constructor>
+			<parameter>defaultMapName</parameter>
 			<parameter>
 				<inject bean="TcapStack" property="provider" />
 			</parameter>

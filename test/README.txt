@@ -16,7 +16,8 @@ m3ua route add AS1 2 -1 -1
 sccp primary_add create <id> <address-indicator> <point-code> <subsystem-number> <translation-type> <numbering-plan>  
 <nature-of-address-indicator> <digits>
 
-sccp primary_add create 1 19 1 8 0 1 4 923330053058 
+sccp address create 1 19 1 8 0 1 4 923330053058
+ 
 
 sccp rule create <id> <mask> <address-indicator> <point-code> <subsystem-number> <translation-type> <numbering-plan>  
 <nature-of-address-indicator> <digits> <ruleType> <primary-address-id> <backup-address-id> <loadsharing-algorithm>
@@ -24,8 +25,8 @@ sccp rule create <id> <mask> <address-indicator> <point-code> <subsystem-number>
 sccp rule create 1 K 18 0 8 0 1 4 923330053058 solitary 1 
 
 //Rule for all out going
-sccp primary_add create 2 19 2 0 0 1 4 - 
-sccp rule create 2 K 18 0 0 0 1 4 * solitary 2 
+sccp address create 2 17 2 0 0 1 4  - 
+sccp rule create 2 K 16 0 0 0 1 4 * solitary 2 
 
 //sccp rsp create <id> <remote-spc> <rspc-flag> <mask> 
 sccp rsp create 1 2 0 0

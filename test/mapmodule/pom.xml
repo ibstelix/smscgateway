@@ -11,9 +11,12 @@
 
     <artifactId>test-mapmodule</artifactId>
     <name>Test : MapModule</name>
-    
     <dependencies>
-       
+    <dependency>
+	<groupId>org.mobicents.protocols.ss7.map</groupId>
+	<artifactId>map-api</artifactId>
+	<version>2.1.0.FINAL</version>
+</dependency>   
        
        
     </dependencies>

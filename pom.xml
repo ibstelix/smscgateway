@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.mobicents</groupId>
 		<artifactId>mobicents-parent</artifactId>
-		<version>2.22</version>
+		<version>2.26</version>
 	</parent>
 
 	<groupId>org.mobicents.smsc</groupId>
@@ -23,6 +23,9 @@
 		</release.name>
 
 		<jboss.microcontainer.version>2.2.0.M2</jboss.microcontainer.version>
+		<mobicents.tools.mavenplugin.eclipse.version>
+			1.0.0.FINAL
+		</mobicents.tools.mavenplugin.eclipse.version>
 		<compiler.plugin.version>2.0.2</compiler.plugin.version>
 		<compile.source>1.7</compile.source>
 		<testng.version>6.2</testng.version>
@@ -36,19 +39,19 @@
 		<mvel.dep.version>2.0.10</mvel.dep.version>
 
 		<mobicents.core.ext.version>1.0.0.BETA2</mobicents.core.ext.version>
-		<mobicents.resources.map.version>2.0.0-SNAPSHOT</mobicents.resources.map.version>
+		<mobicents.resources.map.version>2.8.0-SNAPSHOT</mobicents.resources.map.version>
 		
 		<jslee.ext.version>1.0.0.BETA2</jslee.ext.version>
 
 		<!-- cloudhopper smpp -->
-		<ch.smpp.version>4.1.2</ch.smpp.version>
+		<ch.smpp.version>5.0.0</ch.smpp.version>
 
-		<ss7.version>2.0.0-SNAPSHOT</ss7.version>
+		<ss7.version>2.1.0.FINAL</ss7.version>
 		<!-- mobicents but not strictly ss7 -->
-		<asn.version>2.0.0-SNAPSHOT</asn.version>
+		<asn.version>2.0.2.FINAL</asn.version>
 		<stream.version>1.0.0.CR1</stream.version>
-		<sctp.version>1.0.0-SNAPSHOT</sctp.version>
-		<commons.version>1.0.0-SNAPSHOT</commons.version>
+		<sctp.version>1.4.0.FINAL</sctp.version>
+		<commons.version>1.0.0.CR1</commons.version>
 
 		<application.name>mobicents-smsc-gateway</application.name>
 	</properties>
@@ -185,10 +188,32 @@
 			</snapshots>
 		</repository>
 		<repository>
-			<id>cloudhopper-public</id>
-			<name>Cloudhopper Public Maven Repository</name>
+			<id>cloudhopper</id>
+			<name>Maven....</name>
+			<url>https://oss.sonatype.org/content/groups/public/com</url>
 			<layout>default</layout>
-			<url>http://maven.cloudhopper.com/repos/third-party</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>mobicents-public-repository-group</id>
+			<name>Mobicens Public Maven Repository Group</name>
+			<url>http://oss.sonatype.org/content/groups/public/</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
 		</repository>
 	</repositories>
 
